@@ -65,6 +65,22 @@ function main() {
 
     let circle3 = new Circle(3);
     circle3.draw();
+
+    console.log(circle1.constructor);
+    console.log(circle2.constructor);
+    console.log(circle3.constructor);
+
+    const l = () => {
+        return 200;
+    };
+
+    console.log(l);
+
+    const f = function () {
+        return 200;
+    };
+
+    console.log(f);
 }
 
 main();
