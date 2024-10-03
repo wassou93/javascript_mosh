@@ -14,14 +14,13 @@ const Circle1 = new Function('radius', `
 `);
 
 // Equivalent to:
-let Circle = Function.apply(Function, ['radius', `
+let Circle = Function.call(Function, 'radius', `
     console.log('this is ', this, radius);
     this.radius = radius;
     this.draw = function() {
         console.log('draw', this.radius);
     };
-`]);
-
+`);
 
 // const circle1 = new Circle1(1);
 
@@ -48,3 +47,5 @@ global.draw();
 
 // circle0.draw();
 // circle1.draw();
+
+circle2.draw.call(circle1);
