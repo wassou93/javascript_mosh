@@ -56,6 +56,14 @@ function main() {
 
     person3["name"] = "Wassim Akkakri";
     console.log(person3.greet());
+
+    let selection = "name";
+    console.log(person3[selection as "name"]);
+
+    // Arrays
+    type array_type = string | number | undefined | null;
+    let list: array_type[] = ["first", "second", "third", 1, 2, 3, undefined];
+    console.log(list);
 }
 
 main();
